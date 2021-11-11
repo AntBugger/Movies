@@ -1,4 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto';
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .side-menu {
   font-family: 'Roboto', sans-serif;
   position: fixed;
@@ -12,7 +14,6 @@
   background: #191919;
   overflow: hidden;
   transition: width .5s;
-  color: white;
 }
 
 .side-menu:hover {
@@ -39,4 +40,13 @@
 .side-menu li a:hover {
   background: #ef3e3a;
   display: block;
+}
+
+.aneri {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
 }
