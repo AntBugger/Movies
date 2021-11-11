@@ -40,6 +40,7 @@
 .side-menu li a:hover {
   background: #ef3e3a;
   display: block;
+  color: white;
 }
 
 #aneri {
