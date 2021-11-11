@@ -42,11 +42,11 @@
   display: block;
 }
 
-.aneri {
+#aneri {
   color: white;
   position: absolute;
   bottom: 0;
-  right: 100%;
+  right: 40%;
   font-family: 'Pacifico', cursive;
   font-size: 30px;
 }
