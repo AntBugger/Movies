@@ -1,234 +1,102 @@
-*{
-  //margin:0px;
-  //padding:0px;
-  //box-sizing:border-box;
-  body{
-    display: grid;
-    place-items:center;
-    background-color: black;
-    color: #adb5bd;
-    font-family: Sans-serif;
-    input[type="checkbox"]{
-      display: none;
-    }
-  }
-}
-
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css");
 .menu {
-   margin:0px;
-  padding:0px;
-  box-sizing:border-box;
-      display: grid;
-    place-items:center;
-    background-color: black;
-    color: #adb5bd;
-    font-family: Sans-serif;
-    input[type="checkbox"]{
-      display: none;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: #fff4f5;
 }
-
-// These are the Configuration variables
-//Change these according to display sizes/ to your needs
-
-$width:60px;  
-$height:8px; 
-$margin:10px; 
-$font-size: 18px;
-$animation-time: .6s;
-
-//Template for the css flexbox model
-
-@mixin flex($dir,$jus, $ai){
-  display: flex;
-  flex-direction:$dir;
-  justify-content:$jus;
-  align-items: $ai;
+.menu li a{
+    display:block;
+    height:em;
+    width:5em;
+    text-indent:-500em;
+    line-height:5em;
+    text-align:center;
+    color: #ff5c62;
+    background: #fff4f5;
+    position: relative;
+    border-bottom: 1px solid #ffe2e3;
+    transition: background 0.3s ease-in-out;
 }
-
-
-
-
-
-//Styling of the .lines class
-
-.lines{
-  cursor:pointer;
-  z-index:1;
-  [class ^="line-"]{
-    width: $width;
-    height:$height;
-    background-color: #fff;
-    margin: $margin 0;
-    transition:all $animation-time ease;
-  }
+.menu li a:before {
+  font-family: FontAwesome;
+  speak: none;
+  text-indent: 0em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
 }
-
-//This is the hamburger Menu icon toggle On & Off.
-
-#menu-active:checked ~ label{
-  .line-1{
-    transform: translatey($height+ $margin) rotate(45deg);
-  }
-  .line-2{
-    transform:scale(0);
-  }
-  .line-3{
-    transform: translatey(-($height+$margin)) rotate(-45deg);
-      }
+.menu li a.search:before {
+  content: "\f002";
 }
-
-
-
-
-//Styling configuration for the .menu class
-//This is the main container that holds the 3 sections
-//The (.items.first) , label & (.items.last)
-
-
-.menu{
-  @include flex(row, null, null);
+.menu li a.archive:before {
+  content: "\f187";
 }
-
-
-
-//Styling rules for the checkbox label
-
-label{
-  @include flex(row,null, null);
+.menu li a.pencil:before {
+  content: "\f040";
 }
-
-//Styling of the .items class(includes both .first & .last classes)
-
-.items{
-  z-index:0;
-  transition: all $animation-time ease;
-  font-size: $font-size;
-  font-weight:600;
-  @include flex(row, center, center);
-  [class ^="i-"]{
-    margin: 0 $margin;
-    cursor:pointer;
-    transition: all .3s ease;
-    &:hover{
-      color:white;
-    }
-  }
+.menu li a.contact:before {
+  content: "\f003";
 }
-
-
-//Configuring the initial position of .first & .last class[the menu items]
-
-.first{
-  transform: translatex(100px);
-  opacity:0%;
-  pointer-events:none; // removes the cursor: pointer
-
+.menu li a.about:before {
+  content: "\f007";
 }
-.last{
-  transform:translatex(-100px);
-  opacity:0%;
-  pointer-events:none; // removes the cursor: pointer
+.menu li a.home:before {
+  content: "\f015";
 }
-
-
-
-
-
-// This is the transition of menu items on & Off
-
-#menu-active:checked{
-  & ~ .first{
-    transform: translatex(0px);
-    opacity:100%;
-    pointer-events:auto; // brings back the cursor: pointer
-  }
-  & ~ .last{
-    transform: translatex(0px);
-    opacity:100%;
-    pointer-events:auto; // brings back the cursor: pointer
-  }
+.menu li a:hover{
+  background: #ff5c62;
+  color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Social Media links,
-
-$hover-time : 0.2s;
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-.social{
-  position:absolute;
-  bottom:0px;
-  left:50%;
-  transform:translatex(-50%);
-  color:white;
-  font-family: 'Poppins';
-  font-size:16px;
-  font-weight:500;
-  display: flex;
-  flex-direction:row;
-  a{
-    color: inherit;
-    text-decoration:none;
-  }
+.menu li.current a {
+  background: #ff5e5e;
+  color: #fff;
 }
-.youtube{
-  border: 2px solid white;
-  padding: 5px;
-  transition: all $hover-time ease;
-  svg{
-    width: 25px;
-    height:25px;
-    margin-bottom: -6px;
-  }
-  &:hover{
-    background-color: #fff;
-    color: #000;
-  }
+.menu li a.active {
+  background: #ff5e5e;
+  color: #fff;
 }
-
-.instagram{
-  margin-left:5px;
-  border: 2px solid white;
-  transition: all $hover-time ease;
-  svg{
-    width: 25px;
-    padding-top: 5px;
-    margin: 0 7px;
-  }
-  &:hover{
-    background-color: #fff;
+.menu li a.active:after{
+    position:absolute;
+    left:5em;
+    top:0;
+    content:"";
+    border:2.5em solid transparent;
+    border-left-color:#ff5c62;
+    border-width: 2.5em 1em
+}
+.menu li{
+    position:relative;
+}
+.menu li:after{
+    content: attr(title);
+    position:absolute;
+    left:5em;
+    top:0;
+    height:5em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-transform:uppercase;
+    background:#ff5c62;
+    padding:2em;
+    transition: all 0.3s ease-in-out;
+    visibility:hidden;
+    opacity:0;
+}
+.menu li:hover:after{
+    visibility:visible;
+    opacity:1;
+}
+@media screen and (max-height: 34em){
+  .menu li{
+    font-size:70%;
   }
 }
