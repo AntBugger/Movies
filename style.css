@@ -46,7 +46,8 @@
   color: white;
   position: absolute;
   bottom: 0;
-  right: 40%;
+  margin-bottom: 5%;
+  right: 100%;
   font-family: 'Pacifico', cursive;
   font-size: 30px;
 }
