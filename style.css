@@ -12,6 +12,7 @@
   background: #191919;
   overflow: hidden;
   transition: width .5s;
+  color: white;
 }
 
 .side-menu:hover {
