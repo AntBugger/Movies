@@ -1,102 +1,164 @@
-@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css");
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
+/* Both
+**********************************************/
+
+@import url( https://fonts.googleapis.com/css?family=Quantico );
+body {
+  background-color: #333;
+  font-size       : 31px;
+}
+
+nav {
+  overflow : hidden;
+}
+
+nav input[type=checkbox] {
+  display : none;
+}
+
+menu {
+  position : relative;
+  transition  : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+label {
+  position: relative;
+  z-index : 2;
+}
+
+li {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background: #fff4f5;
 }
-.menu li a{
-    display:block;
-    height:em;
-    width:5em;
-    text-indent:-500em;
-    line-height:5em;
-    text-align:center;
-    color: #ff5c62;
-    background: #fff4f5;
-    position: relative;
-    border-bottom: 1px solid #ffe2e3;
-    transition: background 0.3s ease-in-out;
+
+a , label {
+  display : block !important;
+  width   : auto  !important;
+  text-decoration : none;
+  background      : linear-gradient(#292929, #242424);
+  color   : #FFF;
+  padding : 20px 23px;
+  border  : 1px solid black;
 }
-.menu li a:before {
-  font-family: FontAwesome;
-  speak: none;
-  text-indent: 0em;
+
+a:after {
+  content : '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 1.4em;
+  display : none;
+  font-size   : 18px;
+  font-family: 'Quantico' , georgia;
+  line-height : 18px;
+  text-align : center;
+  color  : #fff;
+  text-shadow : none;
+  padding : 30px 20px;
+  text-transform : capitalize;
 }
-.menu li a.search:before {
-  content: "\f002";
+
+
+li:hover a:after {
+  display : block;
 }
-.menu li a.archive:before {
-  content: "\f187";
+
+li:first-child:hover a:after {
+  content : 'home';
 }
-.menu li a.pencil:before {
-  content: "\f040";
+
+li:nth-child(2):hover a:after {
+  content : 'about';
 }
-.menu li a.contact:before {
-  content: "\f003";
+
+li:nth-child(3):hover a:after {
+  content : 'gallery';
 }
-.menu li a.about:before {
-  content: "\f007";
+
+li:nth-child(4):hover a:after {
+  content : 'video';
 }
-.menu li a.home:before {
-  content: "\f015";
+
+span {
+  display     : inline-block;
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
 }
-.menu li a:hover{
-  background: #ff5c62;
-  color: #fff;
+
+menu a:hover {
+  box-shadow  : inset 0 0 0 4px #B93632;
+  text-shadow : 0 0 2px #B93632;
+  background  : #1B1B1B;
 }
-.menu li.current a {
-  background: #ff5e5e;
-  color: #fff;
+
+/* Horizontal 
+**********************************************/
+
+.horizontal label {
+    float : left;
 }
-.menu li a.active {
-  background: #ff5e5e;
-  color: #fff;
+
+.horizontal menu {
+    float : left;
+    left  : 0;
 }
-.menu li a.active:after{
-    position:absolute;
-    left:5em;
-    top:0;
-    content:"";
-    border:2.5em solid transparent;
-    border-left-color:#ff5c62;
-    border-width: 2.5em 1em
+
+.horizontal li {
+  float : left;  
 }
-.menu li{
-    position:relative;
+
+.horizontal label , .horizontal a {
+  border-right-color : rgba(255,255,255,0.1);  
 }
-.menu li:after{
-    content: attr(title);
-    position:absolute;
-    left:5em;
-    top:0;
-    height:5em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    text-transform:uppercase;
-    background:#ff5c62;
-    padding:2em;
-    transition: all 0.3s ease-in-out;
-    visibility:hidden;
-    opacity:0;
+
+.horizontal li:last-child a {
+  border-right : 1px solid black ;
 }
-.menu li:hover:after{
-    visibility:visible;
-    opacity:1;
+
+.horizontal a:after {
+  top     : 0;
+  left    : 100%;
 }
-@media screen and (max-height: 34em){
-  .menu li{
-    font-size:70%;
-  }
+
+#toggle:checked ~ menu {
+  left       : -312px;
+  transition : left .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#toggle:checked ~ label span {
+  transform : rotate(-90deg);
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+/* Vertical
+**********************************************/
+
+nav.vertical {
+  height: 500px;
+  width : 80px;
+  float : right;
+}
+
+.vertical menu {
+  top   : -332px;
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.vertical a , .vertical label {
+  border-top-color : rgba(255,255,255,0.1);
+}
+
+.vertical a:after {
+  padding : 20px 0;
+  width   : 100%;
+  left : 0;
+  top  : 100%;
+}
+
+.vertical span {
+  transform  : rotate(90deg);
+}
+
+#toggle2:checked ~ menu {
+  top   : 0;
+  transition   : top .4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#toggle2:checked ~ label span {
+  transform  : rotate(0deg);
+  transition : all .4s cubic-bezier(0.86, 0, 0.07, 1);
 }
