@@ -54,8 +54,11 @@
 }
 
 video::-webkit-media-controls-volume-slider {
-  background-color: #f00;
+  background-color: #ef3e3a;
 }
 
+video::-webkit-media-controls-timeline {
+  background-color: #ef3e3a;
+}
 
 
