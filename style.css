@@ -53,3 +53,17 @@
   font-size: 30px;
 }
 
+#active-users, #active-count {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 35%;
+  right: 47%;
+  letter-spacing: 10px;
+}
+
+#active-count {
+  left: 100%;
+  margin-bottom: 0px;
+  font-family: 'Pacifico', cursive;
+}
