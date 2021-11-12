@@ -64,7 +64,6 @@
 
 #active-count {
   left: 100%;
-  font-size: 15px;
-  margin-bottom: 0px;
+/*   margin-bottom: 0px; */
   font-family: 'Pacifico', cursive;
 }
