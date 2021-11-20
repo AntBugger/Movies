@@ -63,7 +63,7 @@
 }
 
 .user_popup {
-  margin: 0;
+  margin-left: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +77,6 @@
   align-items: center;
   font-family: 'Roboto', sans-serif;
 }
-
 .user_popup p {
   color: white;
   font-size: 18px;
