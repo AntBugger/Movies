@@ -61,3 +61,25 @@
   right: 42.7%;
   letter-spacing: 7px;
 }
+
+.user_popup {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  background: #191919;
+  width: fit-content;
+  text-align: center;
+  flex-direction: column;
+  padding: 0 20px;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.user_popup p {
+  color: white;
+  font-size: 18px;
+}
+
