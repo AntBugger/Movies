@@ -53,15 +53,6 @@
   font-size: 30px;
 }
 
-#active-users {
-  color: white;
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 35%;
-  right: 42.7%;
-  letter-spacing: 7px;
-}
-
 .user_popup {
   margin-left: 10%;
   display: flex;
