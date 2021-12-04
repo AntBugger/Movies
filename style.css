@@ -73,8 +73,3 @@
   color: white;
   font-size: 18px;
 }
-
-#UIVideoPlayer #html5-player>div#whiteboard #video-container video {
-    pointer-events: none;
-    width: 100%;
-}
