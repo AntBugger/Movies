@@ -280,11 +280,15 @@ body {
    z-index: 0;
    visibility: hidden;
    cursor: pointer;
-   color: white;
 }
 
 #info a {
    text-decoration: none;
+}
+
+#info p {
+    font-size: 24px;
+    color: white;   
 }
 
 /* -------------- reactions -------------- */
