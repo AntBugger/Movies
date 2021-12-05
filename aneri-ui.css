@@ -288,6 +288,7 @@ body {
 #info p {
     font-size: 24px;
     color: white;   
+    margin-top: 20px;
 }
 
 /* -------------- reactions -------------- */
@@ -296,14 +297,9 @@ body {
    position: absolute;
    left: 90%;
    bottom: 25%;
-/*    transition: .5s .2s; */
    font-size: 45px;
    text-align: center;
 }
-
-/* .reactions[style*="visible"] {
-   font-size: 50px;
-} */
 
 #reaction-icon {
    color: rgb(90, 90, 90);
