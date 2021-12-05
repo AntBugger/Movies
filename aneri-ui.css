@@ -277,6 +277,7 @@ body {
    z-index: 0;
    visibility: hidden;
    cursor: pointer;
+   color: white;
 }
 
 #info a {
