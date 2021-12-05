@@ -8,11 +8,6 @@ body {
     color: inherit;
  }
 
-i {
-/*     font-family: initial !important;
-    font-size: initial !important;  */
-}
-
  /* -------------- menu div / button -------------- */
  
 .menu-div {
@@ -126,8 +121,8 @@ i {
 
  #icon {
     position: relative;
-    top: -13px;
-    font-size: 20px;
+    top: -12px;
+    font-size: 22px;
  }
 
  #icon:hover {
