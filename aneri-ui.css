@@ -125,8 +125,9 @@ i {
  /* -------------- menu buttons -------------- */
 
  #icon {
-   position: relative;
-   top: -15px;
+    position: relative;
+    top: -13px;
+    font-size: 20px;
  }
 
  #icon:hover {
