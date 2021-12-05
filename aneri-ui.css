@@ -142,7 +142,7 @@ body {
     -webkit-transition-duration: 400ms;
     transition-duration: 400ms;
     -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
-    transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+/*     transform: scale(1.2, 1.2) translate3d(0, 0, 0); */
     cursor: pointer;
     box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
  }
