@@ -43,11 +43,6 @@ menu_btn.onclick = function() {
             movieUI(); // in party
         }
     }
-    
-    $('#menu-button').attr('disabled', 'disabled');
-    setTimeout(() => {
-        $('#menu-button').removeAttr('disabled');
-    }, 1500);
 }
 
 // reactions button,  meh-reaction button, 
