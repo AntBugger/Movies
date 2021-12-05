@@ -12,7 +12,7 @@ body {
  
 .menu-div {
    --primary: #596778;
-   --shadow: #3e4042;
+   --shadow: #0e0e0e;
    width: 160px; 
    padding: 30px;
    border-radius: 42px;
@@ -41,7 +41,7 @@ body {
  
  .menu-item,
  .menu-open-button {
-    background: #EEEEEE;
+    background: #FFFFFF;
     border-radius: 100%;
     width: 55px;
     height: 55px;
@@ -287,7 +287,7 @@ body {
 .reactions {
    visibility: hidden;
    position: absolute;
-   left: 75%;
+   left: 90%;
    bottom: 25%;
    transition: .5s .2s;
    font-size: 40px;
