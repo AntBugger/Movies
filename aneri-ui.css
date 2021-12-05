@@ -8,6 +8,10 @@ body {
     color: inherit;
  }
 
+*:focus {
+    outline: none;
+}
+
  /* -------------- menu div / button -------------- */
  
 .menu-div {
