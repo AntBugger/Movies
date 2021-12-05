@@ -303,7 +303,8 @@ body {
 }
 
 #reaction-icon {
-   color: rgb(90, 90, 90);
+/*    color: rgb(90, 90, 90); */
+    color: white;
 }
 
 #reaction-name {
