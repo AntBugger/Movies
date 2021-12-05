@@ -18,7 +18,7 @@ menu_btn.onclick = function() {
         menu.className = "menu-div";
         menu_btn.className = "menu-open-button opened";
         menu_float.className = "menu";
-        document.getElementsByClassName('.menu')[0].style.height = '56px';
+        document.getElementsByClassName('menu')[0].style.height = '56px';
     }
     else {
         // close menu
@@ -39,7 +39,7 @@ menu_btn.onclick = function() {
             user_input.children[0].value = "";
             user_input.children[0].placeholder = "";
             menu.style.width='160px'; // input width
-            document.getElementsByClassName('.menu')[0].style.height = '46px';
+            document.getElementsByClassName('menu')[0].style.height = '46px';
         }
         else {
             movieUI(); // in party
