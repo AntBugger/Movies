@@ -8,6 +8,11 @@ body {
     color: inherit;
  }
 
+i {
+    font-family: initial !important;
+    font-size: initial !important; 
+}
+
  /* -------------- menu div / button -------------- */
  
 .menu-div {
