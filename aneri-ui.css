@@ -35,7 +35,8 @@ body {
    left: 0;
    right: 0;
    width: 70px;
-   height: 56px;
+/*    height: 56px; */
+   height: 46px;
    text-align: center;
    box-sizing: border-box;
    font-size: 25px;
