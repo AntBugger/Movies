@@ -1,5 +1,5 @@
 // Globals
-let screen_name = "Tony";
+let screen_name = "Ant";
 let user_reaction = document.getElementById("reaction-icon");
 let aneri_info = document.querySelector("#info");
 let user_input = document.querySelector(".input_text");
@@ -7,41 +7,46 @@ let mic_enabled = false;
 let ui_state = "state-create";
 
 // menu button click
+let menu_ready = false;
 let menu_btn = document.getElementById("menu-button");
 menu_btn.onclick = function() {
+    if (!menu_ready) {
+        menu_ready = true;
+        setTimeout(menuReady, 1000);
 
-    let action = menu_btn.className;
-    if (action.includes("closed")) {
-        // open menu
-        let menu = document.getElementsByClassName('menu-div-closed')[0];
-        let menu_float = document.getElementsByClassName('menu floating')[0];
-
-        menu.className = "menu-div";
-        menu_btn.className = "menu-open-button opened";
-        menu_float.className = "menu";
-    }
-    else {
-        // close menu
-        let menu = document.getElementsByClassName('menu-div')[0];
-        let menu_float = document.getElementsByClassName('menu')[0];
-
-        menu.className = "menu-div-closed";
-        menu_btn.className = "menu-open-button closed";
-        menu_float.className = "menu floating";
-
-        // reset UI
-        if (ui_state == "state-create" || ui_state == "state-join") {
-            menu_btn_2.style.visibility = "visible"; 
-            menu_btn_3.style.visibility = "visible"; 
-            menu_btn.style.marginLeft = '-25px';
-            user_input.style.visibility = "hidden";
-            user_input.id = "";
-            user_input.children[0].value = "";
-            user_input.children[0].placeholder = "";
-            menu.style.width='160px'; // input width
+        let action = menu_btn.className;
+        if (action.includes("closed")) {
+            // open menu
+            let menu = document.getElementsByClassName('menu-div-closed')[0];
+            let menu_float = document.getElementsByClassName('menu floating')[0];
+    
+            menu.className = "menu-div";
+            menu_btn.className = "menu-open-button opened";
+            menu_float.className = "menu";
         }
         else {
-            movieUI(); // in party
+            // close menu
+            let menu = document.getElementsByClassName('menu-div')[0];
+            let menu_float = document.getElementsByClassName('menu')[0];
+    
+            menu.className = "menu-div-closed";
+            menu_btn.className = "menu-open-button closed";
+            menu_float.className = "menu floating";
+    
+            // reset UI
+            if (ui_state == "state-create" || ui_state == "state-join") {
+                menu_btn_2.style.visibility = "visible"; 
+                menu_btn_3.style.visibility = "visible"; 
+                menu_btn.style.marginLeft = '-25px';
+                user_input.style.visibility = "hidden";
+                user_input.id = "";
+                user_input.children[0].value = "";
+                user_input.children[0].placeholder = "";
+                menu.style.width='160px'; // input width
+            }
+            else {
+                movieUI(); // in party
+            }
         }
     }
 }
@@ -320,4 +325,8 @@ function aneriSettings() {
     // screen name
     user_input.style.visibility = "visible";
     user_input.children[0].placeholder = "screen name: " + screen_name;
+}
+
+function menuReady() {
+    menu_ready = false;
 }
